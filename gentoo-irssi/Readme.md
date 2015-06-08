@@ -13,3 +13,11 @@ image and the stage3 base. Small image but requires the base file to be
 present as well.
 
 By Default I use update-commit.sh for size reasons.
+
+To run this image I use the following:
+
+docker run -it --rm --name irssi -v ${HOME}/.irssi:/root/.irssi
+--sig-proxy=false haven/gentoo-irssi /usr/bin/irssi
+
+Obviously change "haven" for your docker username or whatever user you
+have assigned the image to.
